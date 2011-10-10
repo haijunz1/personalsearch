@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts><package name="struts2" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="excludeParamsStack">
+				<interceptor-ref name="defaultStack">
+					<param name="params.excludeParams">ext-comp-.*</param>
+				</interceptor-ref>
+				<interceptor-ref name="checkLogin"></interceptor-ref>
+			</interceptor-stack>
+			<interceptor name="checkLogin" class="g1105.ps.interceptor.LoginInterceptor"></interceptor>
+		</interceptors>
+		<action name="getPhotos" class="g1105.ps.action.getPhotosAction">
+			<result name="ajaxsuccess">/WEB-INF/ps_jsp/Photos.jsp</result>
+			<result name="success">/WEB-INF/ps_jsp/searchPhotos.jsp</result>
+		</action>
+		<action name="register" class="g1105.ps.action.RegisterAction">
+			<result name="result">/WEB-INF/ps_jsp/result.jsp</result>
+		</action>
+		<action name="login" class="g1105.ps.action.LoginAction">
+			<result name="result">/WEB-INF/ps_jsp/result.jsp</result>
+		</action>
+		<action name="loginFromAndroid" class="g1105.android.LoginFromAndroidAction">
+			<result name="result">/WEB-INF/android_jsp/loginFromAndroid.jsp</result>
+		</action>
+		<action name="logout" class="g1105.ps.action.LogoutAction">
+			<result name="result" type="redirect">/welcome.html</result>
+		</action>
+		<action name="*_jsp">
+			<result>/WEB-INF/ps_jsp/{1}.jsp</result>
+		</action>
+		
+		<action name="addAlbum" class="g1105.metaps.action.AddAlbumAction">
+			<result name="result">/WEB-INF/ps_jsp/test.jsp</result>
+		</action>
+		<action name="deleteAlbum" class="g1105.metaps.action.DeleteAlbumAction">
+			<result name="result">/WEB-INF/ps_jsp/test.jsp</result>
+		</action>
+		<action name="addTagToPicture" class="g1105.metaps.action.AddTagToPictureAction">
+			<result name="result">/WEB-INF/ps_jsp/test.jsp</result>
+		</action>
+		<action name="getUserAllAlbums" class="g1105.metaps.action.GetUserAllAlbumsAction">
+			<result name="result">/WEB-INF/metaps_jsp/getUseraAllAlbumsResult.jsp</result>
+		</action>
+		<action name="uploadPicture" class="g1105.metaps.action.UploadPictureAction">
+			<result name="result">/WEB-INF/ps_jsp/uploadFile.jsp</result>
+			<param name="uploadPath">D:/Program Files/Apache Software Foundation/Tomcat 6.0/webapps/IMP/images/flickr/</param>
+		</action>
+		<action name="getSysTopNTags" class="g1105.metaps.action.GetSysTopNTagsAction">
+			<result name="result">/WEB-INF/metaps_jsp/getSysTopNTags.jsp</result>
+		</action>
+		<action name="getUserTopNTags" class="g1105.metaps.action.GetUserTopNTagsAction">
+			<result name="result">/WEB-INF/metaps_jsp/getSysTopNTags.jsp</result>
+		</action>
+		<action name="getAlbumAllPicture" class="g1105.metaps.action.GetAlbumAllPicturesAction">
+			<result name="result">/WEB-INF/ps_jsp/Photos.jsp</result>
+		</action>
+		<action name="addPictureToAlbum" class="g1105.metaps.action.AddPictureToAlbumAction">
+			<result name="result">/WEB-INF/metaps_jsp/addPictureToAlbum.jsp</result>
+		</action>
+		<action name="deletePictureFromAlbum" class="g1105.metaps.action.DeletePictureFromAlbumAction">
+			<result name="result">/WEB-INF/metaps_jsp/deletePictureFromAlbum.jsp</result>
+		</action>
+		<action name="markLikePicture" class="g1105.metaps.action.MarkLikePictureAction">
+			<result name="result">/WEB-INF/metaps_jsp/markLikePicture.jsp</result>
+		</action>
+		
+		<action name="getPictureByLatitudeAndLongitude" class="g1105.android.GetPictureByLatitudeAndLongitudeAction">
+			<result name="result">/WEB-INF/android_jsp/getPictureByLatitudeAndLongitude.jsp</result>
+		</action>
+		<action name="downloadPictureToAndroid" class="g1105.android.DownloadPictureContentToAndroidAction">
+			<result></result>
+		</action>
+		<action name="uploadPictureContentFromAndroid" class="g1105.android.UploadPictureContentFromAndroidAction">
+			<result></result>
+		</action>
+		<action name="uploadPictureAttachedInformation" class="g1105.android.UploadPictureAttachedInformation">
+			<result name="result">/WEB-INF/android_jsp/uploadPictureAttachedInformation.jsp</result>
+		</action>
+</package>
+</struts>

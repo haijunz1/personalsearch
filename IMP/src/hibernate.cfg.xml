@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.url">
+		jdbc:mysql://192.168.33.121/PersonalSearch?useUnicode=true&amp;characterEncoding=UTF-8
+	</property>
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">3210mnbvcxz</property>
+	<property name="show_sql">true</property>
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<property name="connection.autocommit">true</property>
+	<mapping resource="Photo.hbm.xml" />
+	<mapping resource="User.hbm.xml" />
+	<mapping resource="Album.hbm.xml" />
+	<mapping resource="album_picture.hbm.xml"/>
+	<mapping resource="tag.hbm.xml"/>
+	<mapping resource="user_tag.hbm.xml"/>
+	<mapping resource="User_likedPicture.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="g1105.ps.entity.Photo" table="PicTag1">
+    	<id name="id" column="PicId" type="string"/>
+       	<property name="tags" type="string" column="PicTags" not-null="false"/>
+       	<property name="path" type="string" column="PicPath" not-null="false"/>
+       	<property name="latitude" column="Latitude" not-null="false"/>
+       	<property name="longitude" column="Longitude" not-null="false"/>
+       	<property name="name" column="Name" not-null="false"></property>
+       	<property name="source" column="Source" not-null="false"></property>
+       	<property name="ownerId" column="OwnerId" not-null="false"></property>
+       	<property name="uploadDate" column="UploadDate" not-null="false"></property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="g1105.ps.entity.User" table="user">
+		<id name="id" column="UserId" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="email" column="UserEmail" not-null="false"/>
+		<property name="password" column="UserPass" not-null="false"/>
+		<property name="name" column="UserName" not-null="false"/>
+		<property name="sex" column="UserSex" not-null="false"/>
+		<property name="birthday" column="UserBirth" not-null="false"/>
+		<property name="company" column="UserCompany" not-null="false"/>
+		<property name="preferences" column="UserPrefer" not-null="false"/>
+	</class>
+</hibernate-mapping>
+  

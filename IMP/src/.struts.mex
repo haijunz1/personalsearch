@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="struts2" location="10,165" size="525,525">
+    <action name="getPhotos" location="310,47" size="150,62">
+      <result name="ajaxsuccess">
+        <resourceEdge source="ajaxsuccess" routing="0" target="Photos.jsp" />
+      </result>
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="searchPhotos.jsp" />
+      </result>
+    </action>
+    <action name="register" location="310,232" size="150,41">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="result.jsp" />
+      </result>
+    </action>
+    <action name="login" location="310,337" size="150,41">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="result.jsp" />
+      </result>
+    </action>
+    <action name="loginFromAndroid" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="loginFromAndroid.jsp" />
+      </result>
+    </action>
+    <action name="logout" location="310,442" size="150,41">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="welcome.html" />
+      </result>
+    </action>
+    <action name="*_jsp" location="65,442" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="{1}.jsp" />
+      </result>
+    </action>
+    <action name="addAlbum" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="test.jsp" />
+      </result>
+    </action>
+    <action name="deleteAlbum" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="test.jsp" />
+      </result>
+    </action>
+    <action name="addTagToPicture" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="test.jsp" />
+      </result>
+    </action>
+    <action name="getUserAllAlbums" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="getUseraAllAlbumsResult.jsp" />
+      </result>
+    </action>
+    <action name="uploadPicture" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="uploadFile.jsp" />
+      </result>
+    </action>
+    <action name="getSysTopNTags" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="getSysTopNTags.jsp" />
+      </result>
+    </action>
+    <action name="getUserTopNTags" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="getSysTopNTags.jsp" />
+      </result>
+    </action>
+    <action name="getAlbumAllPicture" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="Photos.jsp" />
+      </result>
+    </action>
+    <action name="addPictureToAlbum" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="addPictureToAlbum.jsp" />
+      </result>
+    </action>
+    <action name="deletePictureFromAlbum" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="deletePictureFromAlbum.jsp" />
+      </result>
+    </action>
+    <action name="markLikePicture" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="markLikePicture.jsp" />
+      </result>
+    </action>
+    <action name="getPictureByLatitudeAndLongitude" location="0,0" size="0,0">
+      <result name="result">
+        <resourceEdge source="result" routing="0" target="getPictureByLatitudeAndLongitude.jsp" />
+      </result>
+    </action>
+    <action name="downloadPictureToAndroid" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="uploadPictureContentFromAndroid" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+  </package>
+  <webResource name="Photos.jsp" path="/WEB-INF/ps_jsp/Photos.jsp" location="581,185" size="150,55" />
+  <webResource name="searchPhotos.jsp" path="/WEB-INF/ps_jsp/searchPhotos.jsp" location="283,10" size="150,55" />
+  <webResource name="result.jsp" path="/WEB-INF/ps_jsp/result.jsp" location="581,360" size="150,55" />
+  <webResource name="welcome.html" path="/welcome.html" location="585,570" size="150,55" />
+  <webResource name="{1}.jsp" path="/WEB-INF/ps_jsp/{1}.jsp" location="65,745" size="150,55" />
+  <webResource name="test.jsp" path="/WEB-INF/ps_jsp/test.jsp" location="0,0" size="0,0" />
+  <webResource name="getUseraAllAlbumsResult.jsp" path="/WEB-INF/metaps_jsp/getUseraAllAlbumsResult.jsp" location="0,0" size="0,0" />
+  <webResource name="uploadFile.jsp" path="/WEB-INF/ps_jsp/uploadFile.jsp" location="0,0" size="0,0" />
+  <webResource name="getSysTopNTags.jsp" path="/WEB-INF/metaps_jsp/getSysTopNTags.jsp" location="0,0" size="0,0" />
+  <webResource name="getAlbumAllPictures.jsp" path="/WEB-INF/metaps_jsp/getAlbumAllPictures.jsp" location="0,0" size="0,0" />
+  <webResource name="addPictureToAlbum.jsp" path="/WEB-INF/metaps_jsp/addPictureToAlbum.jsp" location="0,0" size="0,0" />
+  <webResource name="deletePictureFromAlbum.jsp" path="/WEB-INF/metaps_jsp/deletePictureFromAlbum.jsp" location="0,0" size="0,0" />
+  <webResource name="markLikePicture.jsp" path="/WEB-INF/metaps_jsp/markLikePicture.jsp" location="0,0" size="0,0" />
+  <webResource name="getPictureByLatitudeAndLongitude.jsp" path="/WEB-INF/metaps_jsp/getPictureByLatitudeAndLongitude.jsp" location="0,0" size="0,0" />
+  <webResource name="loginFromAndroid.jsp" path="/WEB-INF/android_jsp/loginFromAndroid.jsp" location="0,0" size="0,0" />
+  <webResource name="getPictureByLatitudeAndLongitude.jsp" path="/WEB-INF/android_jsp/getPictureByLatitudeAndLongitude.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

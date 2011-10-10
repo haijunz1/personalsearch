@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="g1105.metaps.entity.User_likedPicture" table="user_likedPicture">
+		<composite-id name="userLikedPicturePK" class="g1105.metaps.key.User_likedPicturePK">
+			<key-property name="userId" column="userId" type="java.lang.Integer"></key-property>
+			<key-property name="pictureId" column="pictureId" type="java.lang.String"></key-property>
+		</composite-id>
+	</class>
+</hibernate-mapping>

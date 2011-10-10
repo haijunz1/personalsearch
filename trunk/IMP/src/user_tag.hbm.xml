@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="g1105.metaps.entity.User_tag" table="user_tag">
+	<!--  -->
+		<composite-id name="userTagPK" class="g1105.metaps.key.User_tagPK">
+			<key-property name="userId" column="userId" type="java.lang.Integer"></key-property>
+			<key-property name="tagId" column="tagId" type="java.lang.Integer"></key-property>
+		</composite-id>
+		<property name="weight" column="weight"></property>
+	</class>
+</hibernate-mapping>
+  

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>我的相册</title>
+    <link rel="stylesheet" type="text/css" href="script/ps_css/album-data-view.css" />
+    <link rel="stylesheet" type="text/css" href="../ext-4.0.2a/resources/css/ext-all.css">
+    <link rel="stylesheet" type="text/css" href="../ext-4.0.2a/examples/shared/example.css" />
+    <link rel="stylesheet" type="text/css" href="script/ps_css/album.css">
+<style type="text/css">
+.x-menu-item img.preview-right, .preview-right {
+    background-image: url(WEB-INF/image/preview-right.gif);
+}
+.x-menu-item img.preview-bottom, .preview-bottom {
+    background-image: url(WEB-INF/image/preview-bottom.gif);
+}
+.x-menu-item img.preview-hide, .preview-hide {
+    background-image: url(WEB-INF/image/preview-hide.gif);
+}
+
+#reading-menu .x-menu-item-checked {
+    border: 1px dotted #a3bae9 !important;
+    background: #DFE8F6;
+    padding: 0;
+    margin: 0;
+}
+
+     .upload-icon {
+            background: url('../ext-4.0.2a/examples/shared/icons/fam/image_add.png') no-repeat 0 0 !important;
+        }
+        #fi-button-msg {
+            border: 2px solid #ccc;
+            padding: 5px 10px;
+            background: #eee;
+            margin: 5px;
+            float: left;
+        }
+</style>
+    <script type="text/javascript" src="../ext-4.0.2a/bootstrap.js"></script>
+    <!-- added by lrs -->
+    <script type="text/javascript" src="../ext-4.0.2a/ext-all-debug.js"></script>
+    <!-- end -->
+    <script type="text/javascript" src="script/ps_js/Search.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/AlbumPost.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/AblumDetail.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/AlbumInfo.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/AlbumViewer.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/AlbumPanel.js"></script>   
+    <script type="text/javascript" src="script/ps_js/viewer/AlbumWindow.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/UploadPicWindow.js"></script>
+   <!-- <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAU95kDVDU-5Ve389sRBZmMRSDS7actCjtp4xNzNUSW7xICtwjdhQlKWh2kPaIb2ipOUl4vGqcEu0kWw" type="text/javascript"></script>
+    --> 
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAp-LN3_h8rxZKDgcc9sdkShQ21_PVClAnk-oEBCh-eUTmbaVIbxQ9nQXEq8tU-W5e8btZVculNRmQPA" type="text/javascript"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/Gmap.js"></script>
+    <script type="text/javascript" src="script/ps_js/viewer/AlbumImageViewer.js"></script>
+    <script type="text/javascript" src="script/ps_js/header.js"></script>
+    <script type="text/javascript">
+        Ext.Loader.setConfig({enabled: true});
+        Ext.Loader.setPath('Ext.ux', '../ext-4.0.2a/examples/ux/');
+        Ext.require([
+            'Ext.grid.*',
+            'Ext.data.*',
+            'Ext.util.*',
+            'Ext.Action',
+            'Ext.tab.*',
+            'Ext.button.*',
+            'Ext.form.*',
+            'Ext.layout.container.Card',
+            'Ext.layout.container.Border',
+            'Ext.ux.PreviewPlugin',
+            'Ext.ux.GMapPanel',
+            'Ext.window.MessageBox'
+        ]);
+        Ext.onReady(function(){
+            var app = new AlbumViewer.App();
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

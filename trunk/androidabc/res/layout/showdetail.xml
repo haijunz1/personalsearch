@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1"
+    android:shrinkColumns="1"
+    >
+
+    <TableRow>
+        <TextView
+            android:text="纬度:"
+            android:padding="4dip" 
+            android:textSize="16sp"
+            />
+        <TextView
+            android:text=""
+            android:padding="3dip" 
+            android:textSize="16sp"
+            android:id="@+id/detaillati"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="经度:"
+            android:textSize="16sp"
+            android:padding="4dip" 
+           />
+        <TextView
+            android:text=""
+            android:padding="3dip" 
+            android:textSize="16sp"
+            android:id="@+id/detaillongi"/>
+    </TableRow>
+  
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+        
+    <TableRow android:layout_height="wrap_content">
+        <TextView
+            android:text="拍摄者:"
+            android:textSize="16sp"
+            android:padding="4dip" />
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:padding="3dip" 
+            android:textSize="16sp"
+            android:id="@+id/detailphotographer"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="拍摄时间:"
+            android:textSize="16sp"
+            android:padding="4dip" />
+        <TextView
+            android:text=""
+            android:padding="3dip" 
+            android:textSize="16sp"
+            android:id="@+id/detailtime"/>
+    </TableRow>
+    
+     <TableRow>
+        <TextView
+            android:text="图片来源:"
+            android:textSize="16sp"
+            android:padding="4dip" />
+        <TextView
+            android:text="本地"
+            android:padding="3dip" 
+            android:textSize="16sp"
+            android:id="@+id/detailtime"/>
+    </TableRow>
+  
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+    <TableRow android:layout_height="wrap_content">
+        <TextView
+            android:text="标签:"
+            android:textSize="16sp"
+            android:padding="4dip" />
+        <TextView
+            android:text=""
+            android:layout_height="wrap_content"
+            android:padding="3dip" 
+            android:textSize="16sp"
+            android:id="@+id/detailtag"/>
+        
+    </TableRow>
+</TableLayout>

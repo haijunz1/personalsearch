@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1" android:versionName="1.0" package="com.android.wheretogo.activity">
+	<application android:label="@string/app_name" android:icon="@drawable/icon2">
+		
+		<activity android:name=".ActivityLogin" android:label="@string/app_name">
+			 <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="ActivityMypic"></activity>
+		<activity android:name="ActivityCameraImageShow"></activity>
+		<activity android:name="ActivityTest"></activity>
+		<activity android:name="ActivityImageShow"></activity>
+		<activity android:name="ActivityClear"></activity>
+		<activity android:name="ActivityGo"></activity>
+        <activity android:name="ActivityEditTag"></activity>
+        <activity android:name="ActivityMain"></activity>
+        <activity android:name="ActivityRegister"></activity>
+		<activity android:name="ActivitySitepic"></activity>
+		<activity android:name="ActivityTakepic" android:configChanges="orientation" ></activity>
+		<activity android:name="ActivityDbupdate"></activity>
+		<activity android:name="ActivityShowDetails"></activity>
+		<activity android:name="com.android.wheretogo.activity.ActivityCreateOriginalDb"></activity>
+		<service android:enabled="true" android:name="com.android.wheretogo.service.GpsService" /> 
+		<uses-library android:name="com.google.android.maps" />
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" /> 
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" /> 
+	
+</manifest>
